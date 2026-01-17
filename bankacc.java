@@ -134,3 +134,9 @@ class BankException extends RuntimeException {
         super(message);
     }
 }
+
+public Account deposit(BigDecimal amount) {
+    return new Account(accountNumber, ownerName, pinHash, balance.add(amount));
+}
+
+
